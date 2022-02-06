@@ -1,0 +1,49 @@
+.background{
+    background-color: #ffefd5;
+}
+
+.backgroundLi{
+    background-color:#fff6e5;
+}
+
+.backgroundCounter{
+    background-color:#fff6e5;
+}
+
+.backgroundButton{
+    min-width: 78px;
+    background-color:#ffd68a; 
+    box-shadow: 0 0 40px 40px #ffe7b9 inset, 0 0 0 0 #ffe9bf;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.backgroundButton:hover{
+    background-color:#ffe6b8;
+    box-shadow: 0 0 10px 0 #fde4b6 inset, 0 0 10px 4px #ffc29a;
+}
+
+.check-icon{
+    cursor: pointer;
+}
+
+.checked-icon{
+    color: rgb(21, 231, 49); 
+    cursor: pointer;
+}
+
+.Icon-delete:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.Search-icon{
+    box-shadow: 0 0 40px 40px #ffffff inset, 0 0 0 0 #fde7bf;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+.Search-icon:hover{
+    background-color:#ffffff;
+    box-shadow: 0 0 10px 0 #ffeecf inset, 0 0 10px 4px #ffcfa7;
+}
