@@ -1,15 +1,12 @@
 import React from "react";
-import { TodoContext } from "../TodoContext";
 import '../components/css/Modal.css';
+import { useTodos } from "../components/useTodos";
 
-function TodoForm(props){
+function TodoForm({addTodo,setOpenModal}){
     
     const [newTodoValue, setNewTodoValue] = React.useState('');
 
-    const {
-        addTodo,
-        setOpenModal,
-    } = React.useContext(TodoContext);
+    
 
     const Change = (event) => {
         setNewTodoValue(event.target.value); 
@@ -18,10 +15,14 @@ function TodoForm(props){
     const onCancel = () =>{
         setOpenModal(false);
     };
+
+
     const Submit = (event) =>{
-        event.preventDefault(); //evita que recargue la pagina cuando el formulario se envie. O comportamiento por defecto
-        addTodo(newTodoValue);
-        setOpenModal(false)
+        event.preventDefault(); //evita que recargue la pagina cuando el formulario se envie. O comportamiento por defecto    
+        if(newTodoValue.length >= 1){
+            addTodo(newTodoValue);
+            setOpenModal(false);
+        }else;
     };
 
     return(
@@ -39,9 +40,9 @@ function TodoForm(props){
                     onChange={Change} 
                     placeholder="Tarea ejemplo"/>
             </div>
-            <div className="mt-2 mb-2 d-flex justify-content-end">
+            <div className="mt-2 mb-2 d-flex justify-content-center">
                 <button
-                    className="btn rounded backgroundButton p-2 me-2"
+                    className="btn rounded backgroundButton p-2 me-4"
                     type='button'
                     onClick={onCancel}
                 >Cancelar</button>
